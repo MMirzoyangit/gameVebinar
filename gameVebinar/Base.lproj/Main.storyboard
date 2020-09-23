@@ -1,22 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </sceneKitView>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="gameVebinar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vxn-Ln-h3u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Cm-dk-6cd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </sceneKitView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zv-GI-gGx">
+                                <rect key="frame" x="8" y="44" width="398" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Zv-GI-gGx" firstAttribute="top" secondItem="Oyo-sB-Yko" secondAttribute="top" id="8aw-SV-sRo"/>
+                            <constraint firstItem="0Cm-dk-6cd" firstAttribute="top" secondItem="Vxn-Ln-h3u" secondAttribute="top" id="DEc-Nf-BVB"/>
+                            <constraint firstItem="0Cm-dk-6cd" firstAttribute="trailing" secondItem="Oyo-sB-Yko" secondAttribute="trailing" id="Dc6-Rd-kKy"/>
+                            <constraint firstAttribute="bottom" secondItem="0Cm-dk-6cd" secondAttribute="bottom" id="Pqh-kr-7hb"/>
+                            <constraint firstItem="0Cm-dk-6cd" firstAttribute="leading" secondItem="Oyo-sB-Yko" secondAttribute="leading" id="WKe-eX-doy"/>
+                            <constraint firstItem="Oyo-sB-Yko" firstAttribute="trailing" secondItem="5Zv-GI-gGx" secondAttribute="trailing" constant="8" id="nrq-Yq-Qns"/>
+                            <constraint firstItem="5Zv-GI-gGx" firstAttribute="leading" secondItem="Oyo-sB-Yko" secondAttribute="leading" constant="8" id="sc3-DO-jpK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oyo-sB-Yko"/>
+                    </view>
+                    <connections>
+                        <outlet property="scnView" destination="0Cm-dk-6cd" id="AGy-h3-ZrZ"/>
+                        <outlet property="scoreLabel" destination="5Zv-GI-gGx" id="XEW-vg-IHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
